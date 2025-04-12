@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stress Analyzer</title>
+    <link rel="stylesheet" href="b.css">
+</head>
+<body>
+    <header>
+        <h1>🧠 Stress Analyzer</h1>
+        <p>Your companion for stress monitoring and wellness</p>
+    </header>
+    <main>
+        <section class="login-container">
+            <h2>Welcome Back</h2>
+            <form id="login-form">
+                <div class="input-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" placeholder="Enter username" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Enter password" required>
+                </div>
+                <button type="submit">Login</button>
+            </form>
+            <p>No account? <a href="#">Contact admin</a></p>
+        </section>
+        <section class="dashboard hidden" id="dashboard">
+            <h2>Welcome, <span id="user-name">User</span>!</h2>
+            <button id="monitor-btn">Start Stress Monitoring</button>
+            <button id="reports-btn">View Past Reports</button>
+            <button id="logout-btn">Logout</button>
+            <p id="status">Ready to monitor stress.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Stress Analyzer. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
