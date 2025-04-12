@@ -1,0 +1,224 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+body {
+    background: linear-gradient(145deg, #0F172A, #1E293B);
+    color: #E2E8F0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+/* Header */
+header {
+    background: #1E293B;
+    text-align: center;
+    padding: 2.5rem 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    position: relative;
+    z-index: 10;
+}
+
+header h1 {
+    font-size: 2.8rem;
+    color: #10B981;
+    font-weight: 700;
+    letter-spacing: 1px;
+    animation: fadeIn 1s ease-in;
+}
+
+header p {
+    font-size: 1.3rem;
+    color: #94A3B8;
+    margin-top: 0.6rem;
+    animation: fadeIn 1.5s ease-in;
+}
+
+/* Main Content */
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 1rem;
+}
+
+.login-container, .dashboard {
+    background: #1E293B;
+    padding: 2.5rem;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 420px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    animation: slideUp 0.8s ease-out;
+}
+
+.login-container:hover, .dashboard:hover {
+    transform: translateY(-5px);
+}
+
+.login-container h2, .dashboard h2 {
+    font-size: 2rem;
+    color: #10B981;
+    margin-bottom: 1.8rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* Form Inputs */
+.input-group {
+    margin-bottom: 1.5rem;
+}
+
+.input-group label {
+    display: block;
+    font-size: 1.1rem;
+    color: #D1D5DB;
+    margin-bottom: 0.4rem;
+    font-weight: 500;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 0.9rem;
+    border: none;
+    border-radius: 8px;
+    background: #334155;
+    color: #F3F4F6;
+    font-size: 1rem;
+    transition: background 0.3s, box-shadow 0.3s;
+}
+
+.input-group input:focus {
+    outline: none;
+    background: #475569;
+    box-shadow: 0 0 8px rgba(16, 185, 129, 0.5);
+}
+
+.input-group input::placeholder {
+    color: #9CA3AF;
+}
+
+/* Buttons */
+button {
+    width: 100%;
+    padding: 1rem;
+    background: #10B981;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    margin: 0.6rem 0;
+}
+
+button:hover {
+    background: #059669;
+    transform: scale(1.02);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+.dashboard button {
+    max-width: 320px;
+    display: block;
+    margin: 0.8rem auto;
+}
+
+/* Links and Text */
+.login-container p {
+    margin-top: 1.2rem;
+    font-size: 0.95rem;
+    color: #94A3B8;
+    text-align: center;
+}
+
+.login-container a {
+    color: #10B981;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.login-container a:hover {
+    text-decoration: underline;
+}
+
+.dashboard p#status {
+    margin-top: 1.5rem;
+    font-size: 1.1rem;
+    color: #10B981;
+    text-align: center;
+    animation: fadeIn 0.5s ease;
+}
+
+/* Hidden Class */
+.hidden {
+    display: none;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background: #1E293B;
+    color: #94A3B8;
+    font-size: 0.9rem;
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 2.2rem;
+    }
+
+    header p {
+        font-size: 1.1rem;
+    }
+
+    .login-container, .dashboard {
+        padding: 1.8rem;
+        max-width: 90%;
+    }
+
+    .login-container h2, .dashboard h2 {
+        font-size: 1.7rem;
+    }
+
+    button {
+        padding: 0.8rem;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .input-group input {
+        padding: 0.7rem;
+    }
+
+    .dashboard button {
+        max-width: 100%;
+    }
+}
